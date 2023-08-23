@@ -1,0 +1,221 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Estilos del menú lateral */
+.sidebar {
+    background-color: #f1f1f1;
+    padding: 20px;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+
+    left: -250px; /* Cambia el valor de "left" a "-250px" para que el menú se oculte completamente */
+    transition: left 0.5s ease-in-out;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar.hidden {
+    display: none;
+}
+
+.sidebar.closed {
+    left: -100%; /* Cambia el valor de "right" a "-100%" para ocultar completamente el menú */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar li a {
+    color: #333;
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar li a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.logout-button {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Estilos del contenido principal */
+.content {
+    padding: 20px;
+    margin-top: 90px;
+    text-align: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .content {
+        margin-left: 250px;
+    }
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: right;
+    margin-top: 100px;
+}
+
+/* Estilos del formulario */
+.add-user-form {
+    max-width: 400px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.add-user-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.add-user-form input[type="text"],
+.add-user-form input[type="email"],
+.add-user-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.add-user-form button[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.add-user-form button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.delete-user-form {
+    max-width: 400px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.delete-user-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.delete-user-form input[type="password"],
+.delete-user-form select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.delete-user-form button[type="submit"] {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.delete-user-form button[type="submit"]:hover {
+    background-color: #d32f2f;
+}
+
+/* Estilos del botón para abrir la barra lateral */
+.open-sidebar-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 999;
+    transition: transform 0.3s ease-in-out;
+}
+
+.open-sidebar-button.close {
+    transform: rotate(180deg);
+}
+
+.open-sidebar-button span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin-bottom: 5px;
+}
